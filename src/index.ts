@@ -5,6 +5,7 @@ import config from './config/config';
 import logger from './config/logger';
 
 // @ts-ignore
+var port = parseInt(process.env.PORT || "8080")
 
 const main = async () => {
   let server: any;
@@ -15,8 +16,8 @@ const main = async () => {
     .then(() => console.log('--database connection successful--'))
     .catch((err) => console.log('--error connecting to database---'));
 
-  server = app.listen(8080, () => {
-    logger.info(`Listening to port 8080`);
+  server = app.listen(port, () => {
+    logger.info(`Listening to port ${port}`);
   });
 
   const exitHandler = () => {
