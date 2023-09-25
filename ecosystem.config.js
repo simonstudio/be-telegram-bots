@@ -3,7 +3,7 @@ module.exports = {
         // 1
         {
             name: "metafanpagesupport.pro",
-            cwd: "../exins/build/metafanpagesupport.pro",
+            cwd: "../exins/build",
             script: "npx",
             args: "serve -s metafanpagesupport.pro -p " + 3001
         },
